@@ -4,17 +4,16 @@ Chart.defaults.global.defaultFontColor = '#858796';
 
 // Pie Chart Example
 var ctx = document.getElementById("myPieChart");
-var ctx1 = document.getElementById("myPieChart1");
 var ctx2 = document.getElementById("myPieChart2");
-var eleArray = [ctx, ctx1, ctx2];
-
+var eleArray = [ctx, ctx2];
+var dataArray = [[15, 25, 60],[55, 30, 15]];
 for (var i = 0; i < eleArray.length; i++) {
     new Chart(eleArray[i], {
         type: 'doughnut',
         data: {
             labels: ["Direct", "Referral", "Social"],
             datasets: [{
-                data: [55, 30, 15],
+                data: dataArray[i],
                 backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
                 hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",

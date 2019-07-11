@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,42 +6,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>mPortal</title>
+    <title>SB Admin 2 - Tables</title>
 
-    <!-- Custom fonts for this template-->
+    <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-    <!-- Custom styles for this template-->
+    <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Portal Dashboards">
-    <link rel="apple-touch-icon" href="/mPortal/icons/icon-152x152.png">
-    <meta name="description" content="mPortal">
-    <meta name="theme-color" content="#0096BF">
-    <meta property="og:image" content="icons/icon-512.png">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="manifest" href="manifest.json">
-    <script src="data/mPortalData.js" defer></script>
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
-<body id="page-top" class="sidebar-toggled">
+<body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon">
-                    <!-- <i class="fas fa-laugh-wink"></i> -->
                     <img src="img/tu.png" style="width:50px;height:50px" />
                 </div>
                 <div class="sidebar-brand-text mx-3">mPortal</sup></div>
@@ -51,7 +43,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
@@ -134,26 +126,14 @@
                 </a>
             </li>
 
-
-            <li class="nav-item">
-                <a class="nav-link" href="Messages.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Messages</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="Reports.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Reports</span>
-                </a>
-            </li>
-            <li class="nav-item">
+            <!-- Nav Item - Tables -->
+            <li class="nav-item active">
                 <a class="nav-link" href="Reviewed Accounts.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Reviewed Accounts</span>
                 </a>
             </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -212,7 +192,6 @@
                                 </form>
                             </div>
                         </li>
-
                         <li class="nav-item d-none d-sm-inline-block mr-2 d-none d-lg-inline   text-gray-600 small"><div style="height: 4.375rem;padding-top:1.5rem">Sample Health System :  Sample Hospital</div></li>
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
@@ -228,35 +207,35 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="mr-3">
-                                        <div class="icon-circle" style="background-color:#0A80BF">
-                                            <i class="fas fa-exclamation text-white"></i>
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">Feature Enhancement: HICN/MBI on My Queue</span>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="mr-3">
-                                        <div class="icon-circle" style="background-color:#0A80BF">
-                                            <i class="fas fa-exclamation  text-white"></i>
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="small text-gray-500">December 7, 2019</div>
-                                        Renaming Medicare DSH Report
+                                        $290.29 has been deposited into your account!
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="mr-3">
-                                        <div class="icon-circle" style="background-color:#0A80BF">
-                                            <i class="fas fa-exclamation text-white"></i>
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="small text-gray-500">December 2, 2019</div>
-                                        New Feature Enhancement: Multiple Selections on Reported Accounts Widget
+                                        Spending Alert: We've noticed unusually high spending for your account.
                                     </div>
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
@@ -282,7 +261,7 @@
                                     </div>
                                     <div class="font-weight-bold">
                                         <div class="text-truncate">2016 Commercial Missed and Outstanding Account List.</div>
-                                        <div class="small text-gray-500">Amy Clinton Â· 58m</div>
+                                        <div class="small text-gray-500">Amy Clinton · 58m</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -292,7 +271,7 @@
                                     </div>
                                     <div>
                                         <div class="text-truncate">H2110-20161231 Adjusted Invoice</div>
-                                        <div class="small text-gray-500">Jae Chun Â· 1d</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -302,7 +281,7 @@
                                     </div>
                                     <div>
                                         <div class="text-truncate">H2110-20160630 Corrected Invoice!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez Â· 2d</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -312,7 +291,7 @@
                                     </div>
                                     <div>
                                         <div class="text-truncate">Missed and Oustanding accounts</div>
-                                        <div class="small text-gray-500">Chicken the Dog Â· 2w</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
@@ -325,7 +304,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Joe User</span>
-                                <img class="img-profile rounded-circle" src="img/user60x60.png">
+                                <img class="img-profile rounded-circle" src="Img/user60X60.png" alt="">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -357,213 +336,125 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
-
-                    <!-- System stats -->
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">System Stats</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Scope</div>
-                                            <a class="dropdown-item" href="#">All Locations</a>
-                                            <a class="dropdown-item" href="#">Hospital 1</a>
-                                            <a class="dropdown-item" href="#">Hospital 2</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-xl-4 mb-4">
-                                            <!-- System stats (Accounts) Card Example -->
-                                            <div class="mb-4">
-                                                <div class="card border-left-primary shadow h-100 py-2">
-                                                    <div class="card-body">
-                                                        <div class="row no-gutters align-items-center">
-                                                            <div class="col mr-2">
-                                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Accounts</div>
-                                                                <div class="h5 mb-0 font-weight-bold text-gray-800">20,080</div>
-                                                            </div>
-                                                            <div class="col-auto">
-                                                                <i class="fas fa-file-invoice fa-2x text-gray-300"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- System stats (Charges) Card Example -->
-                                            <div class="mb-4">
-                                                <div class="card border-left-success shadow h-100 py-2">
-                                                    <div class="card-body">
-                                                        <div class="row no-gutters align-items-center">
-                                                            <div class="col mr-2">
-                                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Charges</div>
-                                                                <div class="h5 mb-0 font-weight-bold text-gray-800">$4,630,478.68</div>
-                                                            </div>
-                                                            <div class="col-auto">
-                                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="mb-4">
-                                                <div class="card border-left-success shadow h-100 py-2">
-                                                    <div class="card-body">
-                                                        <div class="row no-gutters align-items-center">
-                                                            <div class="col mr-2">
-                                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Recoveries</div>
-                                                                <div class="h5 mb-0 font-weight-bold text-gray-800">$885,609.07</div>
-                                                            </div>
-                                                            <div class="col-auto">
-                                                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 mb-4">
-                                            <div class="mt-4 text-center small">
-                                                <span class="mr-2">
-                                                    Cash Recoveries Beginning of Engagement
-                                                </span>
-                                            </div>
-                                            <div class="chart-pie pt-4 pb-2">
-                                                <canvas id="myPieChart"></canvas>
-                                            </div>
-                                            <div class="mt-4 text-center small">
-                                                <span class="mr-2">
-                                                    <i class="fas fa-circle text-primary"></i> Medicare
-                                                </span>
-                                                <span class="mr-2">
-                                                    <i class="fas fa-circle text-success"></i> Medicaid
-                                                </span>
-                                                <span class="mr-2">
-                                                    <i class="fas fa-circle text-info"></i> Commercial
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Outstanding Pie -->
-                        <div class="col-xl-3 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Outstanding Accounts</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Scope</div>
-                                            <a class="dropdown-item" href="#">All Locations</a>
-                                            <a class="dropdown-item" href="#">Hospital 1</a>
-                                            <a class="dropdown-item" href="#">Hospital 2</a>
-                                        </div>
-                                    </div>
-                                </div>
+                    <h1 class="h3 mb-2 text-gray-800">Reviewed Accounts</h1>
 
 
-                                <div class="row">
-                                    <!-- Card Body -->
-                                    <div class="col card-body">
-                                        <div class="mt-4 text-center small">
-                                            <span class="mr-2">
-                                                Sample HC System - Accounts
-                                            </span>
-                                        </div>
-                                        <div class="chart-pie pt-4 pb-2">
-                                            <canvas id="myPieChart2"></canvas>
-                                        </div>
-                                        <div class="mt-4 text-center small">
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-primary"></i> Medicare
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-success"></i> Medicaid
-                                            </span>
-                                            <span class="mr-2">
-                                                <i class="fas fa-circle text-info"></i> Commercial
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Productivity -->
-                        <div class="col-xl-4 col-lg-4">
-                            <!-- Bar Chart -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Near Billing Deadline</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-bar">
-                                        <canvas id="myBarChart"></canvas>
-                                        <div class="mt-0 text-center small">
-                                            <span class="mr-2">
-                                                Weeks Before Timely Filing Deadline
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Outstanding Oppurtunity
-                                        </span>
-                                    </div>
-                                </div>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Account #</th>
+                                            <th>last Name</th>
+                                            <th>First Name</th>
+                                            <th>MRN</th>
+                                            <th>Billing Deadline</th>
+                                            <th>Accepted</th>
+                                            <th>Hospital Name</th>
+                                            <th>Reviewed</th>
+                                            <th>Reviewed By</th>
+                                            <th>Status</th>
+                                            <th>Hold</th>
+                                            <th>Total Charges</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Account #</th>
+                                            <th>last Name</th>
+                                            <th>First Name</th>
+                                            <th>MRN</th>
+                                            <th>Billing Deadline</th>
+                                            <th>Accepted</th>
+                                            <th>Hospital Name</th>
+                                            <th>Reviewed</th>
+                                            <th>Reviewed By</th>
+                                            <th>Status</th>
+                                            <th>Hold</th>
+                                            <th>Total Charges</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td><u>ad7894hdu</u></td>
+                                            <td>dfsefad</td>
+                                            <td><u>lskdjflk</u></td>
+                                            <td>jdfkkdf</td>
+                                            <td>09/08/2019</td>
+                                            <td>Not Accepted</td>
+                                            <td>Sample Hospital</td>
+                                            <td>06/11/2019</td>
+                                            <td>Michael_Walters</td>
+                                            <td>Credited</td>
+                                            <td>Never On Hold</td>
+                                            <td>$3714.15</td>
+                                        </tr>
+                                        <tr>
+                                            <td><u>kd6574uui</u></td>
+                                            <td>vndkhf</td>
+                                            <td><u>jdkdsls</u></td>
+                                            <td>389nd8if</td>
+                                            <td>12/08/2018</td>
+                                            <td>Not Accepted</td>
+                                            <td>Sample Hospital</td>
+                                            <td>06/10/2019</td>
+                                            <td>Vamshi_Karla</td>
+                                            <td>Excluded</td>
+                                            <td>Previously Paid</td>
+                                            <td>$1139.30</td>
+                                        </tr>
+                                        <tr>
+                                            <td><u>1sdffdio</u></td>
+                                            <td>dfsefad</td>
+                                            <td><u>lskdjflk</u></td>
+                                            <td>jdfkkdf</td>
+                                            <td>09/08/2019</td>
+                                            <td>Not Accepted</td>
+                                            <td>Sample Hospital</td>
+                                            <td>05/29/2019</td>
+                                            <td>Siva_Thotakura</td>
+                                            <td>Credited</td>
+                                            <td>Never On Hold</td>
+                                            <td>$969.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td><u>lskdjflk</u></td>
+                                            <td>tjdglncd</td>
+                                            <td><u>qbsplmxbs</u></td>
+                                            <td>nhwzmnrf</td>
+                                            <td>09/08/2019</td>
+                                            <td>Not Accepted</td>
+                                            <td>Sample Hospital</td>
+                                            <td>05/29/2019</td>
+                                            <td>Michael_Walters</td>
+                                            <td>Credited</td>
+                                            <td>Never On Hold</td>
+                                            <td>$2714.80</td>
+                                        </tr>
+                                        <tr>
+                                            <td><u>ad7894hdu</u></td>
+                                            <td>dfsefad</td>
+                                            <td><u>lskdjflk</u></td>
+                                            <td>jdfkkdf</td>
+                                            <td>09/08/2019</td>
+                                            <td>Not Accepted</td>
+                                            <td>Sample Hospital</td>
+                                            <td>05/29/2019</td>
+                                            <td>Michael_Walters</td>
+                                            <td>Credited</td>
+                                            <td>Never On Hold</td>
+                                            <td>597.00</td>
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-
-                        <!-- Bar Chart -->
-                        <div class="col-xl-4 col-lg-4">
-                            <!-- Bar Chart -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Productivity</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-bar">
-                                        <canvas id="myBarChart1"></canvas>
-                                        <div class="mt-0 text-center small">
-                                            <span class="mr-2">
-                                                Feedback Week
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle" style="color:#A9D161"></i> Credited
-                                            <i class="fas fa-circle" style="color:#F17123"></i> Excluded
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
 
                 </div>
                 <!-- /.container-fluid -->
@@ -597,7 +488,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">Ã—</span>
+                        <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
@@ -620,28 +511,12 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-pie-demo.js"></script>
-    <script src="js/demo/chart-bar-demo.js"></script>
-    <script src="js/demo/chart-bar-demo1.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/mPortal/sw.js')
-                    .then((reg) => {
-                        console.log('Service worker registered.', reg);
-                    });
-            });
-        }
-        if (!('Notification' in window)) {
-            //alert('This browser does not support notifications!');
-        }
-        else {
-            //alert('This browser does support notifications!');
-        }
-    </script>
+    <script src="js/demo/datatables-demo.js"></script>
+
 </body>
 
 </html>

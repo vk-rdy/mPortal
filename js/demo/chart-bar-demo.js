@@ -29,12 +29,15 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 // Bar Chart Example
 var ctx = document.getElementById("myBarChart");
-var myBarChart = new Chart(ctx, {
+var eleArray = [ctx];
+
+for (var i = 0; i < eleArray.length; i++) {
+    var myBarChart = new Chart(eleArray[i], {
   type: 'bar',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["<1 week", "1 week", "2 weeks", "3 weeks", "4 weeks", "4+ weeks"],
     datasets: [{
-      label: "Revenue",
+      label: "Outstanding Oppurtunity",
       backgroundColor: "#4e73df",
       hoverBackgroundColor: "#2e59d9",
       borderColor: "#4e73df",
@@ -109,3 +112,4 @@ var myBarChart = new Chart(ctx, {
     },
   }
 });
+}
