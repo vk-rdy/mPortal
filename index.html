@@ -418,7 +418,7 @@
                                             <a class="dropdown-item" href="#">Hospital 1</a>
                                             <a class="dropdown-item" href="#">Hospital 2</a>
                                             <hr/>
-                                            <a class="dropdown-item" href="share();return false;">Share</a>
+                                            <a class="dropdown-item" href="javascript:share();">Share</a>
                                         </div>
                                     </div>
                                 </div>
@@ -461,7 +461,7 @@
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                            <a class="dropdown-item" href="share();return false;">Share</a>
+                                            <a class="dropdown-item" href="javascript:share();">Share</a>
                                         </div>
                                     </div>
                                 </div>
@@ -598,6 +598,7 @@
                         .then(() => console.log('Successful share'))
                         .catch((error) => console.log('Error sharing', error));
                 }
+                return false;
             }
 
             
