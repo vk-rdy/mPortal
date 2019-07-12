@@ -1,6 +1,6 @@
 self.importScripts('data/mPortalData.js');
 
-// Files to cache
+//  Files to cache
 var cacheName = 'mPortalCache';
 var appShellFiles = [
   '/mPortal/login.html'
