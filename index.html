@@ -650,7 +650,7 @@
                             const response = await fetch('https://vkrapps.us/push-notifications-api/public-key');
                             const vapidPublicKey = await response.text();
                             console.log('decoding:', vapidPublicKey)
-                            const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
+                            const convertedVapidKey = PushNotificationsController.urlB64ToUint8Array(vapidPublicKey);
                             console.log('got vapidPublicKey', vapidPublicKey, convertedVapidKey)
                             PushNotificationsController.storePushSubscription(pushSubscription)
                                 .then(function (response) {
