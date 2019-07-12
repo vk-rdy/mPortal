@@ -595,7 +595,7 @@
 
                 return {
                     retrievePublicKey: function () {
-                        return fetch('http://vkr1984-001-site2.itempurl.com/push-notifications-api/public-key').then(function (response) {
+                        return fetch('https://vkrapps.us/push-notifications-api/public-key').then(function (response) {
                             if (response.ok) {
                                 return response.text().then(function (applicationServerPublicKeyBase64) {
                                     return urlB64ToUint8Array(applicationServerPublicKeyBase64);
@@ -606,14 +606,14 @@
                         });
                     },
                     storePushSubscription: function (pushSubscription) {
-                        return fetch('http://vkr1984-001-site2.itempurl.com/push-notifications-api/subscriptions', {
+                        return fetch('https://vkrapps.us/push-notifications-api/subscriptions', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify(pushSubscription)
                         });
                     },
                     discardPushSubscription: function (pushSubscription) {
-                        return fetch('http://vkr1984-001-site2.itempurl.com/push-notifications-api/subscriptions?endpoint=' + encodeURIComponent(pushSubscription.endpoint), {
+                        return fetch('https://vkrapps.us/push-notifications-api/subscriptions?endpoint=' + encodeURIComponent(pushSubscription.endpoint), {
                             method: 'DELETE'
                         });
                     }
@@ -623,7 +623,7 @@
             function sendPushNotification() {
                 let payload = { topic: topicInput.value, notification: notificationInput.value, urgency: urgencySelect.value };
 
-                fetch('http://vkr1984-001-site2.itempurl.com/push-notifications-api/notifications', {
+                fetch('https://vkrapps.us/push-notifications-api/notifications', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
@@ -647,7 +647,7 @@
                                 console.log('got subscription!', subscription)
                                 return subscription;
                             }
-                            const response = await fetch('http://vkr1984-001-site2.itempurl.com/push-notifications-api/public-key');
+                            const response = await fetch('https://vkrapps.us/push-notifications-api/public-key');
                             const vapidPublicKey = await response.text();
                             console.log('decoding:', vapidPublicKey)
                             const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
