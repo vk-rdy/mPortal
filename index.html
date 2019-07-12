@@ -630,12 +630,12 @@
                 })
                     .then(function (response) {
                         if (response.ok) {
-                            writeToConsole('Successfully sent Push Notification');
+                            console.log('Successfully sent Push Notification');
                         } else {
-                            writeToConsole('Failed to send Push Notification');
+                            console.log('Failed to send Push Notification');
                         }
                     }).catch(function (error) {
-                        writeToConsole('Failed to send Push Notification: ' + error);
+                        console.log('Failed to send Push Notification: ' + error);
                     });
             }
 
@@ -663,12 +663,12 @@
                     PushNotificationsController.storePushSubscription(subscription)
 									.then(function (response) {
 										if (response.ok) {
-											writeToConsole('Successfully subscribed for Push Notifications');
+											console.log('Successfully subscribed for Push Notifications');
 										} else {
-											writeToConsole('Failed to store the Push Notifications subscrition on server');
+											console.log('Failed to store the Push Notifications subscrition on server');
 										}
 									}).catch(function (error) {
-										writeToConsole('Failed to store the Push Notifications subscrition on server: ' + error);
+										console.log('Failed to store the Push Notifications subscrition on server: ' + error);
 									})
 									});
         }
