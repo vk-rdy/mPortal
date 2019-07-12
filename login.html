@@ -63,6 +63,118 @@
                 return (((sign) ? '' : '-') + '$' + num);// + '.' + cents);
             }
         </script>
+		
+		<script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/mPortal/sw.js')
+                    .then((reg) => {
+                        console.log('Service worker registered.', reg);
+                    });
+            });
+
+            const PushNotificationsController = (function () {
+                function urlB64ToUint8Array(base64String) {
+                    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+                    const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
+
+                    const rawData = window.atob(base64);
+                    const outputArray = new Uint8Array(rawData.length);
+
+                    for (let i = 0; i < rawData.length; ++i) {
+                        outputArray[i] = rawData.charCodeAt(i);
+                    }
+
+                    return outputArray;
+                }
+
+                return {
+                    retrievePublicKey: function () {
+                        return fetch('https://vkrapps.us/push-notifications-api/public-key').then(function (response) {
+                            if (response.ok) {
+                                return response.text().then(function (applicationServerPublicKeyBase64) {
+                                    return urlB64ToUint8Array(applicationServerPublicKeyBase64);
+                                });
+                            } else {
+                                return Promise.reject(response.status + ' ' + response.statusText);
+                            }
+                        });
+                    },
+                    storePushSubscription: function (pushSubscription) {
+                        return fetch('https://vkrapps.us/push-notifications-api/subscriptions', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(pushSubscription)
+                        });
+                    },
+                    discardPushSubscription: function (pushSubscription) {
+                        return fetch('https://vkrapps.us/push-notifications-api/subscriptions?endpoint=' + encodeURIComponent(pushSubscription.endpoint), {
+                            method: 'DELETE'
+                        });
+                    }
+                };
+            })();
+
+            function sendPushNotification() {
+                let payload = { topic: topicInput.value, notification: notificationInput.value, urgency: urgencySelect.value };
+
+                fetch('https://vkrapps.us/push-notifications-api/notifications', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                })
+                    .then(function (response) {
+                        if (response.ok) {
+                            console.log('Successfully sent Push Notification');
+                        } else {
+                            console.log('Failed to send Push Notification');
+                        }
+                    }).catch(function (error) {
+                        console.log('Failed to send Push Notification: ' + error);
+                    });
+            }
+
+            navigator.serviceWorker.ready
+                .then(function (registration) {
+                    return registration.pushManager.getSubscription()
+                        .then(async function (subscription) {
+                            if (subscription) {
+                                console.log('got subscription!', subscription)
+                                return subscription;
+                            }
+							PushNotificationsController.retrievePublicKey().then(function(convertedVapidKey){
+								console.log('got vapidPublicKey', convertedVapidKey)
+								
+								return registration.pushManager.subscribe({
+									userVisibleOnly: true,
+									applicationServerKey: convertedVapidKey
+								});
+							});
+                            
+                        });
+
+                }).then(function (subscription) {
+                    console.log('register!', subscription)
+                    PushNotificationsController.storePushSubscription(subscription)
+									.then(function (response) {
+										if (response.ok) {
+											console.log('Successfully subscribed for Push Notifications');
+										} else {
+											console.log('Failed to store the Push Notifications subscrition on server');
+										}
+									}).catch(function (error) {
+										console.log('Failed to store the Push Notifications subscrition on server: ' + error);
+									})
+									});
+        }
+        if (!('Notification' in window)) {
+            //alert('This browser does not support notifications!');
+        }
+        else {
+            //alert('This browser does support notifications!');
+        }
+      
+    </script>
     </div>
         <div class="container">
 
