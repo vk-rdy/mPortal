@@ -417,7 +417,8 @@
                                             <a class="dropdown-item" href="#">All Locations</a>
                                             <a class="dropdown-item" href="#">Hospital 1</a>
                                             <a class="dropdown-item" href="#">Hospital 2</a>
-                                            <hr/>
+                                            <hr />
+                                            <a class="dropdown-item" href="mailto:?subject=Outstanding%20Accounts&body=Outstanding%20Accounts%20%201000%20Accounts">Email</a>
                                             <a class="dropdown-item" href="javascript:share();">Share</a>
                                         </div>
                                     </div>
@@ -454,13 +455,14 @@
                         <div class="col-xl-4 col-lg-6">
                             <!-- Bar Chart -->
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Near Billing Deadline</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="mailto:?subject=Near%20Billing%20Deadline&body=Near%20Billing%20Deadline%20120%20Accounts">Email</a>
                                             <a class="dropdown-item" href="javascript:share();">Share</a>
                                         </div>
                                     </div>
@@ -591,9 +593,8 @@
             function share(obj) {
                 if (navigator.share) {
                     navigator.share({
-                        title: 'Web Fundamentals',
-                        text: 'Check out Web Fundamentals — it rocks!',
-                        url: 'https://developers.google.com/web',
+                        title: 'Outstanding Accounts',
+                        text: '1500 Accounts'
                     })
                         .then(() => console.log('Successful share'))
                         .catch((error) => console.log('Error sharing', error));
