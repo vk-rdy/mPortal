@@ -235,7 +235,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="img-profile rounded-circle" src="Img/user60x60.png" alt="">
+                                        <img class="img-profile rounded-circle" src="img/user60x60.png" alt="">
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
@@ -245,7 +245,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="img-profile rounded-circle" src="Img/user60x60.png" alt="">
+                                        <img class="img-profile rounded-circle" src="img/user60x60.png" alt="">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
@@ -255,7 +255,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="img-profile rounded-circle" src="Img/user60x60.png" alt="">
+                                        <img class="img-profile rounded-circle" src="img/user60x60.png" alt="">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
@@ -656,11 +656,11 @@
                 PushNotificationsController.retrievePublicKey()
                     .then(function (retrievedPublicKey) {
                         applicationServerPublicKey = retrievedPublicKey;
-                        writeToConsole('Successfully retrieved Public Key');
+                        console.log('Successfully retrieved Public Key');
 
                         subscribeForPushNotificationsInternal();
                     }).catch(function (error) {
-                        writeToConsole('Failed to retrieve Public Key: ' + error);
+                        console.log('Failed to retrieve Public Key: ' + error);
                     });
             }
         }
