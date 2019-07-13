@@ -646,7 +646,7 @@
                 };
             })();
 
-            function sendPushNotification() {
+/*             function sendPushNotification() {
                 let payload = { topic: topicInput.value, notification: notificationInput.value, urgency: urgencySelect.value };
 
                 fetch('https://vkrapps.us/push-notifications-api/notifications', {
@@ -663,7 +663,7 @@
                     }).catch(function (error) {
                         console.log('Failed to send Push Notification: ' + error);
                     });
-            }
+            } */
 
             navigator.serviceWorker.ready
                 .then(function (registration) {
