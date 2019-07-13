@@ -622,10 +622,12 @@
     <script src="js/demo/chart-bar-demo1.js"></script>
     <script src="push-notifications-controller.js"></script>
     <script>
+        var pushServiceWorkerRegistration;
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/mPortal/sw.js')
                     .then((reg) => {
+                        pushServiceWorkerRegistration = reg;
                         console.log('Service worker registered.', reg);
                     });
             });
